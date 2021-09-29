@@ -11,9 +11,10 @@ import java.util.Scanner;
 public class Main {
 
 
+    public static  List<Bejegyzes> bejegyzesLista = new ArrayList<>();
     public static void main(String[] args) {
 
-         List<Bejegyzes> bejegyzesLista = new ArrayList<>();
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Add meg, hogy hány bejegyzést szeretnél felvenni: ");
@@ -49,7 +50,27 @@ public class Main {
             System.out.println(bejegyzesLista.get(i));
         }
 
+
+
+
+        legNepszerubb();
+
     }
+
+    public static void legNepszerubb(){
+        int legtobbLike = 0;
+
+        for (int i = 0; i < bejegyzesLista.size(); i++){
+            if (bejegyzesLista[i] < legtobbLike){
+                legtobbLike = bejegyzesLista[i];
+            }
+        }
+        System.out.println("A legtöbb like: " + legtobbLike);
+
+    }
+
+
+
 
     }
 
