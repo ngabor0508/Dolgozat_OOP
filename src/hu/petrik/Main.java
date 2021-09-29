@@ -5,13 +5,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        public List<Bejegyzes> bejegyzesLista = new ArrayList<>();
+
+         List<Bejegyzes> bejegyzesLista = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Add meg, hogy hány bejegyzést szeretnél felvenni: ");
@@ -37,7 +39,13 @@ public class Main {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
+
+        Random rnd = new Random();
+        int n = rnd.nextInt(bejegyzesSzam);
+        n += 20;
+
     }
 
     }
-}
+
