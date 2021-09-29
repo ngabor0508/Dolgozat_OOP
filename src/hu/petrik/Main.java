@@ -45,6 +45,10 @@ public class Main {
         int n = rnd.nextInt(bejegyzesSzam);
         n += 20;
 
+        for(int i = 0; i < bejegyzesLista.size(); i++) {
+            System.out.println(bejegyzesLista.get(i));
+        }
+
     }
 
     }
