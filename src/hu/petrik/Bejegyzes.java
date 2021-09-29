@@ -2,6 +2,7 @@ package hu.petrik;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 public class Bejegyzes {
     private String szerzo;
@@ -10,19 +11,34 @@ public class Bejegyzes {
     private LocalDateTime letrejott;
     private LocalDateTime szerkesztve;
 
-    public Bejegyzes(String szerzo, String tartalom){
+
+
+    public Bejegyzes(){
         likeok = 0;
         letrejott = LocalDateTime.now();
         szerkesztve = LocalDateTime.now();
 
     }
+    public Bejegyzes(String szerzo, String tartalom, int likeok, LocalDateTime letrejott, LocalDateTime szerkesztve){
+        this.szerzo = szerzo;
+        this.tartalom = tartalom;
+        this.likeok = likeok;
+        this.letrejott = letrejott;
+        this.szerkesztve = szerkesztve;
+
+
+
+
+    }
+
+
 
     public String getSzerzo(){
-        return szerzo;
+        return this.szerzo;
     }
 
     public String getTartalom() {
-        return tartalom;
+        return this.tartalom;
     }
 
     public void setTartalom(String tartalom) {
@@ -30,18 +46,21 @@ public class Bejegyzes {
     }
 
     public int getLikeok() {
-        return likeok;
+        return this.likeok;
     }
 
     public LocalDateTime getLetrejott() {
-        return letrejott;
+
+        return this.letrejott;
     }
 
     public LocalDateTime getSzerkesztve() {
-        return szerkesztve;
+
+        return this.szerkesztve;
     }
 
     public void like(){
+
         likeok++;
     }
 
