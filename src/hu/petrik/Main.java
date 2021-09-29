@@ -54,6 +54,7 @@ public class Main {
 
 
         legNepszerubb();
+        harmincOtnelTobbLike();
 
     }
 
@@ -70,7 +71,34 @@ public class Main {
     }
 
 
+    public static void harmincOtnelTobbLike() {
+        boolean tobbLike = false;
 
-
+        for (int i = 0; i < bejegyzesLista.size(); i++) {
+            if (likeok < 35) {
+                tobbLike = true;
+            }
+        }
+        if (tobbLike == true) {
+            System.out.println("Van olyan bejegyzés ami 35-nél több likeot kapott.");
+        } else {
+            System.out.println("Nincs olyan bejegyzés.");
+        }
     }
+
+    public static void  tizenOtnelKevesebbLike(){
+        int szamlalo = 0;
+        for(int i = 0; i < bejegyzesLista.size(); i++){
+            if (likeok < 15){
+                szamlalo++;
+            }
+        }
+    }
+
+
+
+
+
+
+}
 
